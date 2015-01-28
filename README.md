@@ -1,13 +1,29 @@
 # Log4php wrapper to use Log4php with Magento
 
+## Installation
+
+## Configuration
+
 ## Usage
+
+### Simple usage
+
+Usage in case of your own module has dependency to Nmmlm_Log:
+
+    $log       = Nmmlm_Log_Logger::getLogger(__CLASS__);
+    $log->trace("trace level message");
+    $log->debug("debug level message");
+    $log->info("info level message");
+    $log->warn("warn level message");
+    $log->error("error level message");
+    $log->fatal("fatal level message");
 
 ### Create adapter in your own module
 
-This adapter uses Nmmlm_Log wrapper or Magento default logs:
+Use adapter to switch between Nmmlm_Log wrapper or Magento default logs:
 
     <?php
-    class Nmmlm_Core_Logger
+    class Namespace_Module_Logger
     {
         /** @var bool 'true' - Log4php logging framework is used. */
         private static $_isLog4phpUsed = null;
@@ -37,7 +53,7 @@ This adapter uses Nmmlm_Log wrapper or Magento default logs:
          *
          * @param string $name
          *
-         * @return Nmmlm_Core_Logger
+         * @return Namespace_Module_Logger
          */
         public static function getLogger($name)
         {
@@ -95,3 +111,12 @@ This adapter uses Nmmlm_Log wrapper or Magento default logs:
         }
     }
 
+Use your own adapter to log messages:
+
+    $log       = Namespace_Module_Logger::getLogger(__CLASS__);
+    $log->trace("Log your message with Log4php (in case of Nmmlm_Log extension is installed) or with Magento log (otherwise).");
+    $log->debug("debug level message");
+    $log->info("info level message");
+    $log->warn("warn level message");
+    $log->error("error level message");
+    $log->fatal("fatal level message");
