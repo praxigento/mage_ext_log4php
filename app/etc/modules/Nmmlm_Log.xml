@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!--
+    NM-MLM Logging module.
+-->
+<config>
+    <modules>
+        <Nmmlm_Log>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Nmmlm_Log>
+    </modules>
+</config>

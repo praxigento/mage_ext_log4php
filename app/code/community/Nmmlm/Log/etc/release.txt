@@ -1,0 +1,15 @@
+Nmmlm_Log: Log4php Wrapper
+
+Release 0.3.0 (2012/12/12):
+  - Log4php library is updated to version 2.3.0;
+  - Log4php library is moved to '/lib' folder;
+
+Release 0.2.0 (2012/10/08):
+  - Extension is moved to 'community' pool;
+  - Logger transforms its name from Magento style "Company_Module_Class" to  Log4php style "Company.Module.Class";
+  - New memory appender is added to Log4php (appenders/LoggerAppenderMemory);
+  - Nmmlm_Log_Util class is added to extension;
+
+Release 0.1.0 (2012/09/27):
+  - initial version of the wrapper for Log4php 2.2.1;
+

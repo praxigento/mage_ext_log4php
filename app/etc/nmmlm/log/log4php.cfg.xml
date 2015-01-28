@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns="http://logging.apache.org/log4php/">
+    <!-- ***********************************************************************************************
+        THIS IS SAMPLE CONFIGURATION THAT WILL BE REWRITTEN ON REINSTALL.
+        DON'T USE THIS FILE IN YOUR CONFIGURATION. MAKE A COPY TO "var/log/log4php.cfg.xml" AND CHANGE
+        "SYSTEM / CONFIGURATION / DEVELOPER / LOG SETTINGS / LOG4PHP CONFIG FILE NAME" VALUE
+    *********************************************************************************************** -->
+
+    <!--
+            Available log levels:
+                ALL -> TRACE -> DEBUG -> INFO -> WARN -> ERROR -> FATAL -> OFF
+            Available appenders:
+                http://logging.apache.org/log4php/docs/appenders.html
+                appenders/LoggerAppenderMemory
+            Available layouts:
+                http://logging.apache.org/log4php/docs/layouts.html
+    -->
+
+    <!-- default appender -->
+    <appender name="default" class="LoggerAppenderFile">
+        <layout class="LoggerLayoutPattern">
+            <param name="conversionPattern" value="%date{d.m.Y H:i:s,u} %logger %-5level %msg%n"/>
+        </layout>
+        <param name="file" value="var/log/log4php.log"/>
+        <param name="append" value="true"/>
+    </appender>
+
+    <!-- root logger; by default logs warnings only -->
+    <root>
+        <appender_ref ref="default"/>
+        <level value="WARN"/>
+    </root>
+
+    <!-- Sample of the logs customization -->
+    <appender name="customLogs" class="LoggerAppenderFile">
+        <layout class="LoggerLayoutPattern">
+            <param name="conversionPattern" value="%date{d.m.Y H:i:s,u} %logger %-5level %msg%n"/>
+        </layout>
+        <param name="file" value="var/log/log4php.custom.log"/>
+        <param name="append" value="true"/>
+    </appender>
+
+    <!-- setup logger for all classes in the 'Nmmlm' package (all 'Nmmlm_*' classes) -->
+    <logger name="Nmmlm">
+        <appender_ref ref="customLogs"/>
+        <level value="DEBUG"/>
+    </logger>
+
+</configuration>
