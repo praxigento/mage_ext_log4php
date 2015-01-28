@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
-<!--
-    NM-MLM Logging module.
--->
+<!-- Magento compatible wrapper for Apache log4php logging framework -->
 <config>
     <modules>
         <Nmmlm_Log>

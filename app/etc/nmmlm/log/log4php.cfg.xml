@@ -17,33 +17,18 @@
     -->
 
     <!-- default appender -->
-    <appender name="default" class="LoggerAppenderFile">
+    <appender name="fileDefault" class="LoggerAppenderFile">
         <layout class="LoggerLayoutPattern">
-            <param name="conversionPattern" value="%date{d.m.Y H:i:s,u} %logger %-5level %msg%n"/>
+            <param name="conversionPattern" value="%d{Y/m/d H:i:s,u} %p %c{2}: %m%n"/>
         </layout>
-        <param name="file" value="var/log/log4php.log"/>
+        <param name="file" value="/home/alex/github/mobi_mage_base_ad/mage/var/log/log4php.log"/>
         <param name="append" value="true"/>
     </appender>
 
-    <!-- root logger; by default logs warnings only -->
+    <!-- root logger -->
     <root>
-        <appender_ref ref="default"/>
-        <level value="WARN"/>
+        <appender_ref ref="fileDefault"/>
+        <level value="ALL"/>
     </root>
-
-    <!-- Sample of the logs customization -->
-    <appender name="customLogs" class="LoggerAppenderFile">
-        <layout class="LoggerLayoutPattern">
-            <param name="conversionPattern" value="%date{d.m.Y H:i:s,u} %logger %-5level %msg%n"/>
-        </layout>
-        <param name="file" value="var/log/log4php.custom.log"/>
-        <param name="append" value="true"/>
-    </appender>
-
-    <!-- setup logger for all classes in the 'Nmmlm' package (all 'Nmmlm_*' classes) -->
-    <logger name="Nmmlm">
-        <appender_ref ref="customLogs"/>
-        <level value="DEBUG"/>
-    </logger>
 
 </configuration>

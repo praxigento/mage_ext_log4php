@@ -1,5 +1,8 @@
 Nmmlm_Log: Log4php Wrapper
 
+Release 0.4.0 (2015/01/28):
+  - Magento Composer compatible version;
+
 Release 0.3.0 (2012/12/12):
   - Log4php library is updated to version 2.3.0;
   - Log4php library is moved to '/lib' folder;
