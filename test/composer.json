@@ -1,0 +1,37 @@
+{
+  "name": "praxigento/z_mage_composer_prj_01_full",
+  "version": "1.0.0",
+  "type": "magento-module",
+  "license": "MIT",
+  "homepage": "https://github.com/praxigento/z_mage_composer_prj_01_full",
+  "description": "Magento project with deployment script and mage_ext_log4php extension.",
+  "authors": [
+    {
+      "name": "Alex Gusev",
+      "email": "flancer64@gmail.com"
+    }
+  ],
+  "require": {
+    "magento-hackathon/magento-composer-installer": "*",
+    "magento-hackathon/composer-command-integrator": "*",
+    "magento/core": "1.9.1.0",
+    "magento-hackathon/hackathon_magemonitoring": "*",
+    "praxigento/mage_ext_log4php": "*"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://packages.firegento.com"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/praxigento/mage_ext_log4php"
+    }
+  ],
+  "extra": {
+    "magento-root-dir": "mage",
+    "magento-deploystrategy": "symlink",
+    "auto-append-gitignore": true
+  },
+  "minimum-stability": "dev"
+}
