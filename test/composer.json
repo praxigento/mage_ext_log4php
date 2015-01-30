@@ -22,6 +22,13 @@
     "magento-hackathon/hackathon_magemonitoring": "*",
     "praxigento/mage_ext_log4php": "dev-AD-41"
   },
+  "require-dev": {
+    "phpunit/php-invoker": "*",
+    "phpunit/dbunit": "*",
+    "phpunit/phpunit-selenium": "*",
+    "phpunit/phpunit-story": "*",
+    "phpunit/phpunit": "4.4.*"
+  },
   "repositories": [
     {
       "type": "composer",
@@ -35,6 +42,7 @@
   "extra": {
     "magento-root-dir": "mage",
     "magento-deploystrategy": "symlink",
+    "magento-force": "override",
     "auto-append-gitignore": false
   },
   "minimum-stability": "dev"

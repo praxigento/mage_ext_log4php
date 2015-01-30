@@ -21,5 +21,27 @@
  */
 class Nmmlm_Log_Test_Logger extends PHPUnit_Framework_TestCase
 {
+    public function test_something()
+    {
+        echo "Magento base dir: " . Mage::getBaseDir();
+        $this->assertEquals("2", 2);
+    }
 
+    /**
+     * Traverse up to Mage.php, include file and load Mage.
+     */
+    public static function setUpBeforeClass()
+    {
+        $mage = 'mage/app/Mage.php';
+        $path = '';
+        for ($i = 0; $i < 32; $i++) {
+            if (file_exists($path . $mage)) {
+                require_once $path . $mage;
+                break;
+            } else {
+                $path = '../' . $path;
+            }
+        }
+        Mage::app();
+    }
 }
