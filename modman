@@ -1,6 +1,5 @@
-app/code/community/Nmmlm/Log/etc/config.xml app/code/community/Nmmlm/Log/etc/config.xml
-app/etc/modules/Nmmlm_Log.xml app/etc/modules/Nmmlm_Log.xml
 app/code/community/Nmmlm/Log/ app/code/community/Nmmlm/Log/
+app/etc/modules/Nmmlm_Log.xml app/etc/modules/Nmmlm_Log.xml
 app/locale/en_US/nmmlm/log/Nmmlm_Log.csv app/locale/en_US/nmmlm/log/Nmmlm_Log.csv
 app/locale/ru_RU/nmmlm/log/Nmmlm_Log.csv app/locale/ru_RU/nmmlm/log/Nmmlm_Log.csv
 lib/Log4php/ lib/Log4php/
