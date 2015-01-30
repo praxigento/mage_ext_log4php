@@ -1,2 +1,6 @@
 /.idea/
 /atlassian-ide-plugin.xml
+/test/composer.lock
+/test/mage/
+/test/vendor/
+/module_root/
