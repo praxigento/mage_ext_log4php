@@ -11,7 +11,7 @@
             <modules>
                 <Nmmlm_Log>
                     <files>
-                        <default>nmmlm/log/Nmmlm_Log.csv</default>
+                        <default>Nmmlm_Log.csv</default>
                     </files>
                 </Nmmlm_Log>
             </modules>

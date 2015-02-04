@@ -1,10 +1,5 @@
-app/code/community/Nmmlm/Log/etc/config.xml app/code/community/Nmmlm/Log/etc/config.xml
-app/code/community/Nmmlm/Log/etc/system.xml app/code/community/Nmmlm/Log/etc/system.xml
-app/code/community/Nmmlm/Log/etc/release.txt app/code/community/Nmmlm/Log/etc/release.txt
-app/code/community/Nmmlm/Log/Logger.php app/code/community/Nmmlm/Log/Logger.php
-app/code/community/Nmmlm/Log/Util.php app/code/community/Nmmlm/Log/Util.php
+app/code/community/Nmmlm/Log/ app/code/community/Nmmlm/Log/
 app/etc/modules/Nmmlm_Log.xml app/etc/modules/Nmmlm_Log.xml
-app/etc/nmmlm/log/log4php.cfg.xml app/etc/nmmlm/log/log4php.cfg.xml
+app/locale/en_US/Nmmlm_Log.csv app/locale/en_US/Nmmlm_Log.csv
+app/locale/ru_RU/Nmmlm_Log.csv app/locale/ru_RU/Nmmlm_Log.csv
 lib/Log4php lib/Log4php
-app/locale/en_US/nmmlm/log/Nmmlm_Log.csv app/locale/en_US/nmmlm/log/Nmmlm_Log.csv
-app/locale/ru_RU/nmmlm/log/Nmmlm_Log.csv app/locale/ru_RU/nmmlm/log/Nmmlm_Log.csv
