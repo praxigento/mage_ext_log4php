@@ -1,14 +1,18 @@
 {
-  "name": "praxigento/z_mage_composer_prj_01_full",
+  "name": "praxigento/mage_ext_log4php_test",
   "version": "1.0.0",
-  "type": "magento-module",
+  "type": "project",
   "license": "MIT",
-  "homepage": "https://github.com/praxigento/z_mage_composer_prj_01_full",
+  "homepage": "https://github.com/praxigento/mage_ext_log4php",
   "description": "Magento project with deployment script and mage_ext_log4php extension.",
   "authors": [
     {
       "name": "Alex Gusev",
       "email": "flancer64@gmail.com"
+    },
+    {
+      "name": "Vladimir Golobokov",
+      "email": "vladimirg@inbox.lv"
     }
   ],
   "require": {
@@ -16,7 +20,14 @@
     "magento-hackathon/composer-command-integrator": "*",
     "magento/core": "1.9.1.0",
     "magento-hackathon/hackathon_magemonitoring": "*",
-    "praxigento/mage_ext_log4php": "*"
+    "praxigento/mage_ext_log4php": "dev-AD-41-vg"
+  },
+  "require-dev": {
+    "phpunit/php-invoker": "*",
+    "phpunit/dbunit": "*",
+    "phpunit/phpunit-selenium": "*",
+    "phpunit/phpunit-story": "*",
+    "phpunit/phpunit": "4.4.*"
   },
   "repositories": [
     {
@@ -25,13 +36,14 @@
     },
     {
       "type": "vcs",
-      "url": "https://github.com/praxigento/mage_ext_log4php"
+      "url": "../"
     }
   ],
   "extra": {
     "magento-root-dir": "mage",
     "magento-deploystrategy": "symlink",
-    "auto-append-gitignore": true
+    "magento-force": "override",
+    "auto-append-gitignore": false
   },
   "minimum-stability": "dev"
 }
