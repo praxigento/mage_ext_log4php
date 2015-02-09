@@ -22,13 +22,6 @@
     "magento-hackathon/hackathon_magemonitoring": "*",
     "praxigento/mage_ext_log4php": "dev-AD-41-vg"
   },
-  "require-dev": {
-    "phpunit/php-invoker": "*",
-    "phpunit/dbunit": "*",
-    "phpunit/phpunit-selenium": "*",
-    "phpunit/phpunit-story": "*",
-    "phpunit/phpunit": "4.4.*"
-  },
   "repositories": [
     {
       "type": "composer",

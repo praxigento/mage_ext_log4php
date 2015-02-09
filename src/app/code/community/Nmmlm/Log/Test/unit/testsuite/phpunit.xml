@@ -11,11 +11,6 @@
          bootstrap="./autoload.php">
 <testsuite name="Magento Unit Test">
     <directory>tests</directory>
-    <file>tests/Nmmlm_Log_Test.php</file>
+    <file>tests/Nmmlm_Log_Logger_Test.php</file>
 </testsuite>
-<filter>
-    <whitelist>
-        <directory>../../app/code/community</directory>
-    </whitelist>
-</filter>
 </phpunit>

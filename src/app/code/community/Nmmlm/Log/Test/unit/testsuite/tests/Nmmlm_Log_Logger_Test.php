@@ -1,6 +1,6 @@
 <?php
  
-class Parxigento_Module_NmmlmLogTest extends PHPUnit_Framework_TestCase
+class Nmmlm_Log_Logger_Test extends PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
@@ -14,20 +14,39 @@ class Parxigento_Module_NmmlmLogTest extends PHPUnit_Framework_TestCase
         //$this->_block->setLayout($this->_layout);
     }
  
-    public function testFirstMethod()
+    public function testTrace()
     {
-        /*Here goes the assertions for your block first method*/
       $log = Nmmlm_Log_Logger::getLogger(__CLASS__);
       $log->trace("trace level message");
-      $log->debug("debug level message");
-      $log->info("info level message");
-      $log->warn("warn level message");
-      $log->error("error level message");
-      $log->fatal("fatal level message");
     }
  
-    public function testSecondMethod()
+    public function testDebug()
     {
-        /*Here goes the assertions for your block second method*/
+      $log = Nmmlm_Log_Logger::getLogger(__CLASS__);
+      $log->debug("debug level message");
+    }
+    
+    public function testInfo()
+    {
+      $log = Nmmlm_Log_Logger::getLogger(__CLASS__);
+      $log->info("info level message");
+    }
+    
+    public function testWarn()
+    {
+      $log = Nmmlm_Log_Logger::getLogger(__CLASS__);
+      $log->warn("warn level message");
+    }
+    
+    public function testError()
+    {
+      $log = Nmmlm_Log_Logger::getLogger(__CLASS__);
+      $log->error("error level message");
+    }
+    
+    public function testFatal()
+    {
+      $log = Nmmlm_Log_Logger::getLogger(__CLASS__);
+      $log->fatal("fatal level message");
     }
 }
