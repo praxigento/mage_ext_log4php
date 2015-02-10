@@ -1,16 +1,6 @@
 <?php
 
-class Nmmlm_Log_Test_Logger extends PHPUnit_Framework_TestCase {
-	public function setUp() {
-		/* You'll have to load Magento app in any test classes in this method */
-		$app = Mage::app('default');
-		/* You will need a layout for block tests */
-		//$this->_layout = $app->getLayout();
-		/* Let's create the block instance for further tests */
-		//$this->_block = new Company_Module_Block_Blockname;
-		/* We are required to set layouts before we can do anything with blocks */
-		//$this->_block->setLayout($this->_layout);
-	}
+class Nmmlm_Log_Test_Logger_Test extends PHPUnit_Framework_TestCase {
 
 	public function testTrace() {
 		$log = Nmmlm_Log_Logger::getLogger(__CLASS__);
