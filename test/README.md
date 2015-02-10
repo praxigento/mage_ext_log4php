@@ -8,3 +8,7 @@ Development and testing environment is deployed into this location.
     $ ./vendor/bin/composerCommandIntegrator.php magento-module-deploy
 
 
+## Testing
+
+    $ cd mage/app/code/community/Nmmlm/Log/Test
+    $ phpunit
