@@ -19,7 +19,7 @@
     "magento-hackathon/magento-composer-installer": "*",
     "magento-hackathon/composer-command-integrator": "*",
     "magento/core": "1.9.1.0",
-    "praxigento/mage_ext_log4php": "dev-AD-41-vg"
+    "praxigento/mage_ext_log4php": "dev-master"
   },
   "repositories": [
     {
@@ -28,7 +28,7 @@
     },
     {
       "type": "vcs",
-      "url": "../"
+      "url": "https://github.com/praxigento/mage_ext_log4php"
     }
   ],
   "extra": {
