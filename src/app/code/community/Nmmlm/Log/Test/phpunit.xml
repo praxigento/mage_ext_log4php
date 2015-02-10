@@ -8,9 +8,9 @@
          processIsolation="false"
          stopOnFailure="false"
          syntaxCheck="true"
-         bootstrap="./autoload.php">
-<testsuite name="Magento Unit Test">
-    <directory>tests</directory>
-    <file>tests/Nmmlm_Log_Logger_Test.php</file>
-</testsuite>
+         bootstrap="./phpunit_bootstrap.php">
+    <testsuite name="Magento Unit Test">
+        <directory>tests</directory>
+        <file>tests/Nmmlm_Log_Logger_Test.php</file>
+    </testsuite>
 </phpunit>

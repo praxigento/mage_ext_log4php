@@ -19,7 +19,6 @@
     "magento-hackathon/magento-composer-installer": "*",
     "magento-hackathon/composer-command-integrator": "*",
     "magento/core": "1.9.1.0",
-    "magento-hackathon/hackathon_magemonitoring": "*",
     "praxigento/mage_ext_log4php": "dev-AD-41-vg"
   },
   "repositories": [
