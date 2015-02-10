@@ -1,5 +1,5 @@
-app/code/community/Nmmlm/Log/ app/code/community/Nmmlm/Log/
-app/etc/modules/Nmmlm_Log.xml app/etc/modules/Nmmlm_Log.xml
-app/locale/en_US/Nmmlm_Log.csv app/locale/en_US/Nmmlm_Log.csv
-app/locale/ru_RU/Nmmlm_Log.csv app/locale/ru_RU/Nmmlm_Log.csv
-lib/Log4php lib/Log4php
+src/app/code/community/Nmmlm/Log/ app/code/community/Nmmlm/Log/
+src/app/etc/modules/Nmmlm_Log.xml app/etc/modules/Nmmlm_Log.xml
+src/app/locale/en_US/Nmmlm_Log.csv app/locale/en_US/Nmmlm_Log.csv
+src/app/locale/ru_RU/Nmmlm_Log.csv app/locale/ru_RU/Nmmlm_Log.csv
+src/lib/Log4php lib/Log4php
