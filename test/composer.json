@@ -1,6 +1,5 @@
 {
   "name": "praxigento/mage_ext_log4php_test",
-  "version": "1.0.0",
   "type": "project",
   "license": "MIT",
   "homepage": "https://github.com/praxigento/mage_ext_log4php",
@@ -28,7 +27,7 @@
     },
     {
       "type": "vcs",
-      "url": "../"
+      "url": "https://github.com/praxigento/mage_ext_log4php"
     }
   ],
   "extra": {

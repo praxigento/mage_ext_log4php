@@ -1,6 +1,5 @@
 {
   "name": "praxigento/mage_ext_log4php",
-  "version": "1.0.0",
   "type": "magento-module",
   "license": "MIT",
   "homepage": "https://github.com/praxigento/mage_ext_log4php",
