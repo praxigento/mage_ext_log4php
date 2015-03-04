@@ -1,3 +1,4 @@
+# all Magento files
 /.htaccess
 /api.php
 /app/
@@ -19,3 +20,4 @@
 /shell/
 /skin/
 /var/
+# Remove all entries below or add required ones above

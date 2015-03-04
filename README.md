@@ -2,6 +2,19 @@
 
 ## Installation
 
+    {
+      "require": {
+        "praxigento/mage_ext_log4php": "*"
+      },
+      "repositories": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/praxigento/mage_ext_log4php"
+        }
+      ]
+    }
+
+
 ## Configuration
 
 ## Usage
