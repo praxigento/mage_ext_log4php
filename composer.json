@@ -24,7 +24,6 @@
     "magento-hackathon/magento-composer-installer": "*"
   },
   "config": {
-    "preferred-install": "source"
+    "preferred-install": "auto"
   }
 }
-
