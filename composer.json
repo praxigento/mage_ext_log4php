@@ -13,18 +13,6 @@
       "name": "Vladimir Golobokov",
       "email": "vladimirg@inbox.lv"
     }
-  ],
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "http://packages.firegento.com"
-    }
-  ],
-  "require": {
-    "magento-hackathon/magento-composer-installer": "*"
-  },
-  "config": {
-    "preferred-install": "source"
-  }
+  ]
 }
 
