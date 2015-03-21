@@ -33,7 +33,7 @@ Usage in case of your own module has dependency to Nmmlm_Log:
 
 ### Create adapter in your own module
 
-Use adapter to switch between Nmmlm_Log wrapper or Magento default logs:
+Use adapter to switch between Nmmlm_Log wrapper and Magento default logs:
 
     <?php
     class Namespace_Module_Logger
