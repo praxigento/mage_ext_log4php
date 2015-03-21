@@ -52,18 +52,10 @@ class Praxigento_Log_Logger extends Logger
     private static function initMageLogger()
     {
         $dir = Mage::getBaseDir('base');
-        $file = $dir . DS . Praxigento_Log_Logger::cfgLog4phpConfigFile();
+        $cfg = (string)Mage::getStoreConfig('dev/log/prxgt_log4php_config_file');
+        $file = $dir . DS . $cfg;
         Praxigento_Log_Logger::configure($file);
         Praxigento_Log_Logger::$_isInitialized = true;
-    }
-
-    /**
-     * Return path to Log4php configuration file relative to Magento base directory.
-     * @return string
-     */
-    private static function cfgLog4phpConfigFile()
-    {
-        return (string)Mage::getStoreConfig('dev/log/nmmlm_log4php_config_file');
     }
 
     public function __construct($name)

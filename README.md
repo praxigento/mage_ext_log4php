@@ -21,9 +21,9 @@
 
 ### Simple usage
 
-Usage in case of your own module has dependency to Nmmlm_Log:
+Usage in case of your own module has dependency to Praxigento_Log:
 
-    $log       = Nmmlm_Log_Logger::getLogger(__CLASS__);
+    $log       = Praxigento_Log_Logger::getLogger(__CLASS__);
     $log->trace("trace level message");
     $log->debug("debug level message");
     $log->info("info level message");
@@ -33,14 +33,14 @@ Usage in case of your own module has dependency to Nmmlm_Log:
 
 ### Create adapter in your own module
 
-Use adapter to switch between Nmmlm_Log wrapper or Magento default logs:
+Use adapter to switch between Praxigento_Log wrapper or Magento default logs:
 
     <?php
     class Namespace_Module_Logger
     {
         /** @var bool 'true' - Log4php logging framework is used. */
         private static $_isLog4phpUsed = null;
-        /** @var Nmmlm_Log_Logger */
+        /** @var Praxigento_Log_Logger */
         private $_loggerLog4php;
         /** @var string name for the current logger */
         private $_name;
@@ -49,19 +49,19 @@ Use adapter to switch between Nmmlm_Log wrapper or Magento default logs:
         {
             try {
                 /** load PHP class if not loaded yet */
-                new Nmmlm_Log_Logger('just probe');
+                new Praxigento_Log_Logger('just probe');
             } catch (Exception $e) {
             }
-            self::$_isLog4phpUsed = class_exists('Nmmlm_Log_Logger', false);
+            self::$_isLog4phpUsed = class_exists('Praxigento_Log_Logger', false);
             if (self::$_isLog4phpUsed) {
-                $this->_loggerLog4php = Nmmlm_Log_Logger::getLogger($name);
+                $this->_loggerLog4php = Praxigento_Log_Logger::getLogger($name);
             } else {
                 $this->_name = is_object($name) ? get_class($name) : (string)$name;
             }
         }
     
         /**
-         * Override getter to use '$log = Nmmlm_Log_Logger::getLogger($this)' form in Mage classes.
+         * Override getter to use '$log = Praxigento_Log_Logger::getLogger($this)' form in Mage classes.
          * @static
          *
          * @param string $name
@@ -127,7 +127,7 @@ Use adapter to switch between Nmmlm_Log wrapper or Magento default logs:
 Use your own adapter to log messages:
 
     $log       = Namespace_Module_Logger::getLogger(__CLASS__);
-    $log->trace("Log your message with Log4php (in case of Nmmlm_Log extension is installed) or with Magento log (otherwise).");
+    $log->trace("Log your message with Log4php (in case of Praxigento_Log extension is installed) or with Magento log (otherwise).");
     $log->debug("debug level message");
     $log->info("info level message");
     $log->warn("warn level message");

@@ -12,5 +12,5 @@ Development and testing environment is deployed into this location.
 
 ## Testing
 
-    $ cd mage/app/code/community/Nmmlm/Log/Test
+    $ cd mage/app/code/community/Praxigento/Log/Test
     $ phpunit
