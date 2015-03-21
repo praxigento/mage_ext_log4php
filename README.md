@@ -21,7 +21,7 @@
 
 ### Simple usage
 
-Usage in case of your own module has dependency to Nmmlm_Log:
+Usage in case of your own module being dependent on Nmmlm_Log:
 
     $log       = Nmmlm_Log_Logger::getLogger(__CLASS__);
     $log->trace("trace level message");
