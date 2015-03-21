@@ -1,5 +1,10 @@
 <?php
 /**
+ * Copyright (c) 2015, Praxigento
+ * All rights reserved.
+ */
+
+/**
  * MemoryAppender appends log events to the operative memory and allows to get events after.
  *
  * Authors: Alex Gusev <alex@flancer64.com>

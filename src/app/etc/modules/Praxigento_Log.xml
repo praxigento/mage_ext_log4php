@@ -2,9 +2,9 @@
 <!-- Magento compatible wrapper for Apache log4php logging framework -->
 <config>
     <modules>
-        <Nmmlm_Log>
+        <Praxigento_Log>
             <active>true</active>
             <codePool>community</codePool>
-        </Nmmlm_Log>
+        </Praxigento_Log>
     </modules>
 </config>

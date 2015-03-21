@@ -1,4 +1,10 @@
 <?xml version="1.0"?>
+<!--
+/**
+* Copyright (c) 2015, Praxigento
+* All rights reserved.
+*/
+-->
 <!-- Magento compatible wrapper for Apache log4php logging framework -->
 <config>
     <sections>
@@ -6,7 +12,7 @@
             <groups>
                 <log>
                     <fields>
-                        <nmmlm_log4php_config_file translate="label comment">
+                        <prxgt_log4php_config_file translate="label comment">
                             <label>Log4php Config File Name</label>
                             <comment>Path to configuration file related to Mage base directory (sample: var/log/log4php.cfg.xml)</comment>
                             <frontend_type>text</frontend_type>
@@ -14,7 +20,7 @@
                             <show_in_default>1</show_in_default>
                             <show_in_website>0</show_in_website>
                             <show_in_store>0</show_in_store>
-                        </nmmlm_log4php_config_file>
+                        </prxgt_log4php_config_file>
                     </fields>
                 </log>
             </groups>

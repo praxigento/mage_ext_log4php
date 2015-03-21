@@ -1,19 +1,25 @@
 <?xml version="1.0"?>
+<!--
+/**
+* Copyright (c) 2015, Praxigento
+* All rights reserved.
+*/
+-->
 <!-- Magento compatible wrapper for Apache log4php logging framework -->
 <config>
     <modules>
-        <Nmmlm_Log>
+        <Praxigento_Log>
             <version>0.4.0</version>
-        </Nmmlm_Log>
+        </Praxigento_Log>
     </modules>
     <adminhtml>
         <translate>
             <modules>
-                <Nmmlm_Log>
+                <Praxigento_Log>
                     <files>
-                        <default>Nmmlm_Log.csv</default>
+                        <default>Praxigento_Log.csv</default>
                     </files>
-                </Nmmlm_Log>
+                </Praxigento_Log>
             </modules>
         </translate>
     </adminhtml>
@@ -21,7 +27,7 @@
         <dev>
             <log>
                 <!-- Relative path to default logging configuration -->
-                <nmmlm_log4php_config_file>app/etc/nmmlm/log/log4php.cfg.xml</nmmlm_log4php_config_file>
+                <prxgt_log4php_config_file>app/etc/praxigento/log/log4php.cfg.xml</prxgt_log4php_config_file>
             </log>
         </dev>
     </default>
