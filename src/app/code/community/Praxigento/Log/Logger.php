@@ -24,6 +24,13 @@ class Praxigento_Log_Logger extends Logger
 {
     private static $_isInitialized = false;
 
+
+    public static function resetConfiguration()
+    {
+        parent::resetConfiguration();
+        self::$_isInitialized = false;
+    }
+
     /**
      * Override getter to use '$log = Praxigento_Log_Logger::getLogger($this)' form in Mage classes.
      * @static
@@ -69,13 +76,18 @@ class Praxigento_Log_Logger extends Logger
         Praxigento_Log_Logger::$_isInitialized = true;
     }
 
+    /**
+     * Rewrite Magento style $name (Company_Module_Directory_Class) or PHP namespace $name
+     * (Company\Module\Directory\Class) to log4php style package (Company.Module.Directory.Class).
+     * @param string $name
+     */
     public function __construct($name)
     {
         parent::__construct(Praxigento_Log_Logger::rewriteName($name));
     }
 
     /**
-     * Convert Magento style package (Company_Module_Directory_Class) and PHP namespace
+     * Convert Magento style package (Company_Module_Directory_Class) or PHP namespace
      * (Company\Module\Directory\Class) to log4php style package (Company.Module.Directory.Class).
      * @static
      *
