@@ -40,21 +40,32 @@ class Praxigento_Log_Logger extends Logger
         }
         // define logger name
         if (is_object($name)) {
-            return parent::getLogger(Praxigento_Log_Logger::rewriteName(get_class($name)));
+            $loggerName = get_class($name);
         } else {
-            return parent::getLogger(Praxigento_Log_Logger::rewriteName($name));
+            $loggerName = (string)$name;
         }
+        $fixedName = Praxigento_Log_Logger::rewriteName($loggerName);
+        return parent::getLogger($fixedName);
     }
 
     /**
-     * Load Log4php configuration file.
+     * Analyze Magento configuration and load Log4php configuration file.
      */
     private static function initMageLogger()
     {
         $dir = Mage::getBaseDir('base');
-        $cfg = (string)Mage::getStoreConfig('dev/log/prxgt_log4php_config_file');
-        $file = $dir . DS . $cfg;
-        Praxigento_Log_Logger::configure($file);
+        $isActive = (string)Mage::getStoreConfig('dev/log/active');
+        $isActive = filter_var($isActive, FILTER_VALIDATE_BOOLEAN);
+        if ($isActive) {
+            /* use configuration file*/
+            $cfg = (string)Mage::getStoreConfig('dev/log/prxgt_log4php_config_file');
+            $file = $dir . DS . $cfg;
+            Praxigento_Log_Logger::configure($file);
+        } else {
+            /* disable Log4php output */
+            $options = array('threshold' => 'off');
+            Praxigento_Log_Logger::configure($options);
+        }
         Praxigento_Log_Logger::$_isInitialized = true;
     }
 
@@ -64,7 +75,8 @@ class Praxigento_Log_Logger extends Logger
     }
 
     /**
-     * Convert Magento style package (Company_Module_Directory_Class) and PHP namespace (Company\Module\Directory\Class) to log4php style package (Company.Module.Directory.Class).
+     * Convert Magento style package (Company_Module_Directory_Class) and PHP namespace
+     * (Company\Module\Directory\Class) to log4php style package (Company.Module.Directory.Class).
      * @static
      *
      * @param $name
