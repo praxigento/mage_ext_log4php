@@ -24,11 +24,48 @@ class Praxigento_Log_Logger extends Logger
 {
     private static $_isInitialized = false;
 
+    /**
+     * Rewrite Magento style $name (Company_Module_Directory_Class) or PHP namespace $name
+     * (Company\Module\Directory\Class) to log4php style package (Company.Module.Directory.Class).
+     * @param string $name
+     */
+    public function __construct($name)
+    {
+        parent::__construct(Praxigento_Log_Logger::rewriteName($name));
+    }
+
+    /**
+     * Convert Magento style package (Company_Module_Directory_Class) or PHP namespace
+     * (Company\Module\Directory\Class) to log4php style package (Company.Module.Directory.Class).
+     * @static
+     *
+     * @param $name
+     *
+     * @return mixed
+     */
+    private static function rewriteName($name)
+    {
+        return str_replace('\\', '.', str_replace('_', '.', $name));
+    }
 
     public static function resetConfiguration()
     {
         parent::resetConfiguration();
         self::$_isInitialized = false;
+    }
+
+    /** Recursively returns all appenders in hierarchy to analyze it.  */
+    public static function getAllAppendersInHierarchy($logger)
+    {
+        $result = array();
+        if ($logger instanceof Logger) {
+            // add current logger appenders to results
+            $result = array_merge(
+                $logger->getAllAppenders(),
+                Praxigento_Log_Logger::getAllAppendersInHierarchy($logger->getParent())
+            );
+        }
+        return $result;
     }
 
     /**
@@ -74,30 +111,6 @@ class Praxigento_Log_Logger extends Logger
             Praxigento_Log_Logger::configure($options);
         }
         Praxigento_Log_Logger::$_isInitialized = true;
-    }
-
-    /**
-     * Rewrite Magento style $name (Company_Module_Directory_Class) or PHP namespace $name
-     * (Company\Module\Directory\Class) to log4php style package (Company.Module.Directory.Class).
-     * @param string $name
-     */
-    public function __construct($name)
-    {
-        parent::__construct(Praxigento_Log_Logger::rewriteName($name));
-    }
-
-    /**
-     * Convert Magento style package (Company_Module_Directory_Class) or PHP namespace
-     * (Company\Module\Directory\Class) to log4php style package (Company.Module.Directory.Class).
-     * @static
-     *
-     * @param $name
-     *
-     * @return mixed
-     */
-    private static function rewriteName($name)
-    {
-        return str_replace('\\', '.', str_replace('_', '.', $name));
     }
 
 }

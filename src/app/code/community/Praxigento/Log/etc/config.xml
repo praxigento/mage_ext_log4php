@@ -26,8 +26,12 @@
     <default>
         <dev>
             <log>
-                <!-- Relative path to default logging configuration -->
-                <prxgt_log4php_config_file>app/etc/praxigento/log/log4php.cfg.xml</prxgt_log4php_config_file>
+                <!--
+                    Relative path to default logging configuration
+                    Change it in:
+                    "Adminhtml / System / Configuration / Developer / Log Settings / Log4php Config File Name"
+                -->
+                <prxgt_log4php_config_file>app/code/community/Praxigento/Log/etc/log4php.cfg.xml</prxgt_log4php_config_file>
             </log>
         </dev>
     </default>
