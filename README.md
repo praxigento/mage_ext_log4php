@@ -47,12 +47,7 @@ Use adapter to switch between Praxigento_Log wrapper or Magento default logs:
     
         function __construct($name)
         {
-            try {
-                /** load PHP class if not loaded yet */
-                new Praxigento_Log_Logger('just probe');
-            } catch (Exception $e) {
-            }
-            self::$_isLog4phpUsed = class_exists('Praxigento_Log_Logger', false);
+            self::$_isLog4phpUsed = class_exists('Praxigento_Log_Logger', true);
             if (self::$_isLog4phpUsed) {
                 $this->_loggerLog4php = Praxigento_Log_Logger::getLogger($name);
             } else {
