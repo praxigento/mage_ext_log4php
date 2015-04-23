@@ -47,7 +47,14 @@ Use adapter to switch between Praxigento_Log wrapper or Magento default logs:
     
         function __construct($name)
         {
+            /**
+             * switch off/on error reporting to prevent messages like
+             * "ERR (3): Warning: include(Praxigento\Log\Logger.php): failed to open stream: No such file or directory"
+             * in case of Praxigento_Log module is not used. 
+            */
+            $level = error_reporting(0);
             self::$_isLog4phpUsed = class_exists('Praxigento_Log_Logger', true);
+            error_reporting($level);
             if (self::$_isLog4phpUsed) {
                 $this->_loggerLog4php = Praxigento_Log_Logger::getLogger($name);
             } else {
