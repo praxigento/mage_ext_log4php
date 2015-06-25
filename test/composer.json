@@ -22,6 +22,9 @@
     "magento/core": "1.9.1.1-patch2",
     "praxigento/mage_ext_log4php": "dev-master"
   },
+  "require-dev": {
+    "phpunit/phpunit": "3.7.*"
+  },
   "extra": {
     "magento-root-dir": "mage",
     "magento-deploystrategy": "symlink",
