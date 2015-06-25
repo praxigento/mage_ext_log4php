@@ -16,6 +16,12 @@
 
 
 ## Configuration
+Go to System / Configuration / Developer / Log Settings and setup path to 
+[Log4php](https://logging.apache.org/log4php/quickstart.html) configuration file relative to the Magento root folder:
+
+ ![Magento Configuration](./docs/img/config.png "Magento Configuration")
+
+
 
 ## Usage
 
@@ -33,7 +39,7 @@ Usage in case of your own module has dependency to Praxigento_Log:
 
 ### Create adapter in your own module
 
-Use adapter to switch between Praxigento_Log wrapper or Magento default logs:
+Use adapter to automatically switch between Praxigento_Log wrapper (if installed) and Magento default logs (otherwise):
 
     <?php
     class Namespace_Module_Logger

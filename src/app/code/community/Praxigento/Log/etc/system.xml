@@ -14,7 +14,7 @@
                     <fields>
                         <prxgt_log4php_config_file translate="label comment">
                             <label>Log4php Config File Name</label>
-                            <comment>Path to configuration file related to Mage base directory (sample: var/log/log4php.cfg.xml)</comment>
+                            <comment>Path to configuration file related to Mage base directory (sample: app/etc/log4php.cfg.xml)</comment>
                             <frontend_type>text</frontend_type>
                             <sort_order>10</sort_order>
                             <show_in_default>1</show_in_default>

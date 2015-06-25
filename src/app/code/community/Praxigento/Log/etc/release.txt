@@ -1,5 +1,8 @@
 Praxigento_Log: Log4php Wrapper
 
+Release 0.6.0 (2015/06/25):
+  - Improve documentation;
+
 Release 0.5.0 (2015/03/21):
   - Change Nmmlm namespace to Praxigento namespace;
   - Remove Nmmlm_Log_Util class;
