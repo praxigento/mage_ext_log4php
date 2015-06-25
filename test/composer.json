@@ -15,11 +15,11 @@
     }
   ],
   "require": {
-    "composer/composer": "1.0.0-alpha9",
+    "composer/composer": "1.0.*@alpha",
     "symfony/console": "2.5",
-    "magento-hackathon/magento-composer-installer": "2.1.1",
+    "magento-hackathon/magento-composer-installer": "*",
     "magento-hackathon/composer-command-integrator": "1.0",
-    "magento/core": "1.9.1.0",
+    "magento/core": "1.9.1.1-patch2",
     "praxigento/mage_ext_log4php": "dev-master"
   },
   "extra": {
