@@ -135,7 +135,7 @@ Use adapter to automatically switch between Praxigento_Log wrapper (if installed
 Use your own adapter to log messages:
 
     $log       = Namespace_Module_Logger::getLogger(__CLASS__);
-    $log->trace("Log your message with Log4php (in case of Praxigento_Log extension is installed) or with Magento log (otherwise).");
+    $log->trace("Log your message with Log4php (in case of Praxigento_Log extension is installed) or with Magento log (otherwise)");
     $log->debug("debug level message");
     $log->info("info level message");
     $log->warn("warn level message");
